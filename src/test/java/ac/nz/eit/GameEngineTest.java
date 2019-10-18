@@ -41,12 +41,12 @@ public class GameEngineTest {
     }
 
     @Test
-    public void hit_shouldReturnBetween2And12 () {
+    public void hit_shouldReturnAnIncrease () {
         int preScore = gameEngine.getUser().getPlayerScore();
         gameEngine.hit(gameEngine.getUser());
         int postScore = gameEngine.getUser().getPlayerScore();
-        int scoreDifference = postScore - preScore;
-        assertTrue("Hit should add between 2 and 12 to score", scoreDifference >=2 && scoreDifference <= 12);
+        //int scoreDifference = postScore - preScore;
+        assertTrue("Hit should result in an increase of score", postScore > preScore);
     }
 
     @Test
