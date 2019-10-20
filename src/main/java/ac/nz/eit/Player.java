@@ -3,6 +3,10 @@ package ac.nz.eit;
 public class Player {
     private int playerScore;
 
+    public Player(){
+        playerScore = 0;
+    }
+
     public void setPlayerScore(int score){
         this.playerScore=score;
     }

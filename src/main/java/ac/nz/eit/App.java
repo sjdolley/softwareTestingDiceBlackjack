@@ -16,7 +16,6 @@ public class App
         String playerInputPlay = "";
         String playerInputRoll = "";
         Scanner s = new Scanner(System.in);
-        GameEngine game = new GameEngine();
 
         while (!(playerInputPlay.equals("n")))
         {
@@ -26,10 +25,10 @@ public class App
             playerInputPlay = playerInputPlay.toLowerCase();
             switch (playerInputPlay)
             {
-                case 'y':
+                case "y":
 
 
-                    game.newGame();
+                    GameEngine game = new GameEngine();
 
                     // newGame being a method within the game class which intitialises players scores to zero and the players
 
@@ -50,10 +49,10 @@ public class App
                         }
                         switch (playerInputRoll)
                         {
-                            case 'y':
-                                hit(game.getUser());
+                            case "y":
+                                game.hit(game.getUser());
                                 break;
-                            case 'n':
+                            case "n":
                                 System.out.println("You stand on :" + game.getUser().getPlayerScore());
                                 break;
                             default:
@@ -65,7 +64,7 @@ public class App
                     System.out.println("Dealer Rolls");
                     game.dealerTurn();
                     try{Thread.sleep(1000);}catch(InterruptedException e){System.out.println(e);}
-                    System.out.println("Dealer score is a: " + game.getDealer().getPLayerScore());
+                    System.out.println("Dealer score is a: " + game.getDealer().getPlayerScore());
                     try{Thread.sleep(1000);}catch(InterruptedException e){System.out.println(e);}
                     /* while (AI.getPlayerScore<16)
                     {
@@ -101,7 +100,7 @@ public class App
                 default:
                     System.out.println("Warning Invalid Input");
                     System.out.println("Please enter y or n");
-                    playerInputPlay = s.next().charAt(0);
+                    playerInputPlay = s.nextLine();
                     playerInputPlay = playerInputPlay.toLowerCase();
             }
 
