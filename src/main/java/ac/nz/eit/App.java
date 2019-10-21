@@ -50,7 +50,6 @@ public class App
                             playerInputRoll = playerInputRoll.toLowerCase();
                         }
                         else {
-                            System.out.println("You are bust");
                             playerInputRoll = "n";
                         }
                         switch (playerInputRoll)
@@ -66,12 +65,16 @@ public class App
                                 System.out.println("Please be sure to enter correct data");
                         }
                     }
-                    System.out.println("It is the Dealers Turn");
-                    System.out.println("Dealer Rolls");
-                    game.dealerTurn();
-                    try{Thread.sleep(1000);}catch(InterruptedException e){System.out.println(e);}
-                    System.out.println("Dealer score is a: " + game.getDealer().getPlayerScore());
-                    try{Thread.sleep(1000);}catch(InterruptedException e){System.out.println(e);}
+                    if(game.getUser().getPlayerScore() <= 21){
+                        System.out.println("It is the Dealers Turn");
+                        System.out.println("Dealer Rolls");
+                        game.dealerTurn();
+                        try{Thread.sleep(1000);}catch(InterruptedException e){System.out.println(e);}
+                        System.out.println("Dealer score is a: " + game.getDealer().getPlayerScore());
+                        try{Thread.sleep(1000);}catch(InterruptedException e){System.out.println(e);}
+                    } else {
+                        System.out.println("You are bust");
+                    }
                     /* while (AI.getPlayerScore<16)
                     {
                         System.out.println("Dealer Hits Again");
