@@ -19,27 +19,27 @@ public class PlayerTest {
     @Test
     public void checkupdateScore_playerScore0andDieRoll1_playerScore1shouldReturnTrue() {
         player.updateScore(1);
-        assertTrue("The score should be 1", player.getPlayerScore()==1);
+        assertEquals("The score should be 1", player.getPlayerScore(), 1);
     }
 
     @Test
     public void checkupdateScore_playerScoreis0andDieRoll6_playerScore6shouldReturnTrue() {
         player.updateScore(6);
-        assertTrue("The score should be 6", player.getPlayerScore()==6);
+        assertEquals("The score should be 6", player.getPlayerScore(),6);
     }
 
     @Test
     public void checkupdateScore_playerScoreis20andDieRoll1_playerScore21shouldReturnTrue() {
         player.setPlayerScore(20);
         player.updateScore(1);
-        assertTrue("The score should be 6", player.getPlayerScore()==21);
+        assertEquals("The score should be 6", player.getPlayerScore(), 21);
     }
 
     @Test
     public void checkupdateScore_playerScoreis20andDieRoll6_playerScore26shouldReturnTrue() {
         player.setPlayerScore(20);
         player.updateScore(6);
-        assertTrue("The score should be 6", player.getPlayerScore()==26);
+        assertEquals("The score should be 6", player.getPlayerScore(), 26);
     }
 
     // standard test of valid data
@@ -48,6 +48,6 @@ public class PlayerTest {
     public void checkupdateScore_playerScoreis10andDieRoll3_playerScore13shouldReturnTrue() {
         player.setPlayerScore(10);
         player.updateScore(3);
-        assertTrue("The score should be 6", player.getPlayerScore()==13);
+        assertEquals("The score should be 6", player.getPlayerScore(), 13);
     }
 }
