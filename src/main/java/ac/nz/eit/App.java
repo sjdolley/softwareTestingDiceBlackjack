@@ -36,8 +36,6 @@ public class App
 
                     while (!playerInputRoll.equals("n"))
                     {
-                        System.out.println("//Test: Player score is: " + game.getUser().getPlayerScore());
-
                         System.out.println("Your score is: " + game.getUser().getPlayerScore());
                         if (game.checkScoreValid(game.getUser())) {
                             System.out.println("Do you wish to roll again");
