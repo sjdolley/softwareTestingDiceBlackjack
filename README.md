@@ -2,6 +2,8 @@
 A small scope project to test the fundamentals of software testing with a console blackjack game.
 Requirements to be added
 
+Revision 1.003
+
 ## Requirement 1
 The human player starts
 
