@@ -15,6 +15,13 @@ public class App
 
         String playerInputRoll = "";
         Scanner s = new Scanner(System.in);
+        System.out.println("------------------------------------------------");
+        System.out.println("Welcome to Dice Blackjack");
+        System.out.println("Hit to roll dice and add them to your score");
+        System.out.println("Try not to go over 21, if you do you lose");
+        System.out.println("Dealer will hit until their score is at least 16");
+        System.out.println("Closest to 21 wins, good luck!");
+        System.out.println("------------------------------------------------");
         System.out.println("Would you like to play a game?");
         System.out.println("please enter 'y' or 'n'");
         String playerInputPlay = s.nextLine();
