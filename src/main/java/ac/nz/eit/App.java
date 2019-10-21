@@ -13,16 +13,16 @@ public class App
     public static void main( String[] args )
     {
 
-        String playerInputPlay = "";
         String playerInputRoll = "";
         Scanner s = new Scanner(System.in);
+        System.out.println("Would you like to play a game?");
+        System.out.println("please enter 'y' or 'n'");
+        String playerInputPlay = s.nextLine();
+        playerInputPlay = playerInputPlay.toLowerCase();
 
         while (!(playerInputPlay.equals("n")))
         {
-            System.out.println("Would you like to play a game?");
-            System.out.println("please enter 'y' or 'n'");
-            playerInputPlay = s.nextLine();
-            playerInputPlay = playerInputPlay.toLowerCase();
+
             switch (playerInputPlay)
             {
                 case "y":
@@ -86,6 +86,9 @@ public class App
 
                     if (game.calculateWinner() == game.getUser()) {
                         System.out.println("Congratulations you have won");
+                    }
+                    else if (game.calculateWinner() == null){
+                        System.out.println("It is a draw, you failed to win or lose.");
                     }
                     else {
                         System.out.println("I'm sorry it appears that the computer has beaten you");
