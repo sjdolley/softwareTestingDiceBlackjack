@@ -22,14 +22,13 @@ public class App
 
         while (!(playerInputPlay.equals("n")))
         {
-
+            playerInputRoll = "y";
             switch (playerInputPlay)
             {
                 case "y":
 
 
                     GameEngine game = new GameEngine();
-
                     // newGame being a method within the game class which intitialises players scores to zero and the players
 
                     System.out.println("making your initial roll");
@@ -37,6 +36,8 @@ public class App
 
                     while (!playerInputRoll.equals("n"))
                     {
+                        System.out.println("//Test: Player score is: " + game.getUser().getPlayerScore());
+
                         System.out.println("Your score is: " + game.getUser().getPlayerScore());
                         if (game.checkScoreValid(game.getUser())) {
                             System.out.println("Do you wish to roll again");
