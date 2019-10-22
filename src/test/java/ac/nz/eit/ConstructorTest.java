@@ -10,19 +10,19 @@ public class ConstructorTest {
     @Test
     public void gameEngineConstructor_shouldReturnTrue() {
         GameEngine testGameEngine = new GameEngine();
-        assertThat(testGameEngine, instanceOf(GameEngine.class));
+        assertThat("Should be an instance of the GameEngine class", testGameEngine, instanceOf(GameEngine.class));
     }
 
     @Test
     public void dieConstructor_shouldReturnTrue() {
         Die testDie = new Die();
-        assertThat(testDie, instanceOf(Die.class));
+        assertThat("Should be an instance of the Die class", testDie, instanceOf(Die.class));
     }
 
     @Test
     public void playerConstructor_shouldReturnTrue() {
         Player testPlayer = new Player();
-        assertThat(testPlayer, instanceOf(Player.class));
+        assertThat("Should be an instance of the Player class", testPlayer, instanceOf(Player.class));
     }
 
     @Test
