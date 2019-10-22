@@ -23,4 +23,5 @@ public class DieTest {
         assertTrue("A single Die roll should produce a result of 1-6", result >=1 && result <= 6);
 
     }
+
 }
