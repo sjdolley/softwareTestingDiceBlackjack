@@ -27,10 +27,10 @@ public class App
         String playerInputPlay = s.nextLine();
         playerInputPlay = playerInputPlay.toLowerCase();
 
-        while (!(playerInputPlay.equals("n")))
+        while (!(playerInputPlay.equals("n"))) // while loop to encapsulate game
         {
             playerInputRoll = "y";
-            switch (playerInputPlay)
+            switch (playerInputPlay) // switch statement to validate inputs
             {
                 case "y":
 
@@ -41,9 +41,11 @@ public class App
                     System.out.println("making your initial roll");
                     game.hit(game.getUser());
 
-                    while (!playerInputRoll.equals("n"))
+                    while (!playerInputRoll.equals("n")) // while loop to encapsulate rolling process
                     {
                         System.out.println("Your score is: " + game.getUser().getPlayerScore());
+
+                        // if score is bust player can no longer roll
                         if (game.checkScoreValid(game.getUser())) {
                             System.out.println("Do you wish to roll again? Please enter y/n");
                             playerInputRoll = s.nextLine();
@@ -58,14 +60,15 @@ public class App
                                 game.hit(game.getUser());
                                 break;
                             case "n":
-                                System.out.println("You stand on :" + game.getUser().getPlayerScore());
                                 break;
                             default:
                                 System.out.println("Invalid Input");
                                 System.out.println("Please be sure to enter correct data");
                         }
                     }
+                    // if player did not go bust dealer plays
                     if(game.getUser().getPlayerScore() <= 21){
+                        System.out.println("You stand on :" + game.getUser().getPlayerScore());
                         System.out.println("It is the Dealers Turn");
                         System.out.println("Dealer Rolls");
                         game.dealerTurn();
@@ -73,7 +76,7 @@ public class App
                         System.out.println("Dealer score is a: " + game.getDealer().getPlayerScore());
                         try{Thread.sleep(1000);}catch(InterruptedException e){System.out.println(e);}
                     } else {
-                        System.out.println("You are bust");
+                        System.out.println("You are bust"); //player is bust the player has lost
                     }
                     /* while (AI.getPlayerScore<16)
                     {
@@ -93,16 +96,16 @@ public class App
                     System.out.println("This game has finished");
                     */
 
-                    if (game.calculateWinner() == game.getUser()) {
+                    if (game.calculateWinner() == game.getUser()) { // if player has won
                         System.out.println("Congratulations you have won");
                     }
-                    else if (game.calculateWinner() == null){
+                    else if (game.calculateWinner() == null){ // if result is a draw
                         System.out.println("It is a draw, you failed to win or lose.");
                     }
-                    else {
+                    else { // if player loses
                         System.out.println("I'm sorry it appears that the computer has beaten you");
                     }
-
+                    // enquire if user wants to play again and get input
                     System.out.println("Would you like to play again? Please enter y or n");
                     playerInputPlay = s.nextLine();
                     playerInputPlay = playerInputPlay.toLowerCase();
