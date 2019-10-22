@@ -17,7 +17,7 @@ public class DieTest {
 
     // single test to check the math.random() function produces a result between 1 and 6
     @Test
-    public void checkRoll_whileRollIsBetween1and6_shouldReturnTrue() {
+    public void roll_whileRollIsBetween1and6_shouldReturnTrue() {
         die.roll();
         int result = die.getValue();
         assertTrue("A single Die roll should produce a result of 1-6", result >=1 && result <= 6);
