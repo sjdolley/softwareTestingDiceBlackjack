@@ -45,5 +45,8 @@ There is to be no limits on the amount of times a user can hit
 ## Requirement 13
 The AI is to stop hitting once the score of 16 is reached
 
+## Requirement 14
+Incorrect inputs result in user being prompted to enter again
+
 
 
