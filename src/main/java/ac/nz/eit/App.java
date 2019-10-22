@@ -45,7 +45,7 @@ public class App
                     {
                         System.out.println("Your score is: " + game.getUser().getPlayerScore());
                         if (game.checkScoreValid(game.getUser())) {
-                            System.out.println("Do you wish to roll again");
+                            System.out.println("Do you wish to roll again? Please enter y/n");
                             playerInputRoll = s.nextLine();
                             playerInputRoll = playerInputRoll.toLowerCase();
                         }
