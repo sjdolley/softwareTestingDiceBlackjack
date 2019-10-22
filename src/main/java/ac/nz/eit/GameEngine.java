@@ -1,10 +1,16 @@
 package ac.nz.eit;
 
+/*
+    This is the GameEngine class
+    Contains all information about the current game
+    Including 2 players and the die to be rolled
+ */
 public class GameEngine {
     private Die die = new Die();
     private Player user = new Player();
     private Player dealer = new Player();
 
+    //This is the constructor for the GameEngine class
     public GameEngine(){}
 
     //Runs through the entire dealer turn
