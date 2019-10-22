@@ -11,7 +11,7 @@ public class PlayerTest_PlayerScore10 {
 
     @Before
     public void setup() {
-        Player player = new Player();
+        player = new Player();
         player.setPlayerScore(10);
     }
 
