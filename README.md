@@ -40,7 +40,7 @@ If scores are the same a draw is declared
 This is to be a single player game
 
 ## Requirement 12
-There is to be no limits on the amount of times a user can hit
+There is to be no limits on the amount of times a user can hit as long as he has a valid score != 21
 
 ## Requirement 13
 The AI is to stop hitting once the score of 16 is reached
